@@ -4,6 +4,15 @@ public class Policy {
 private int policyNumber;
 private float policyPremium;
 private int accountNumber;
+public Policy(){
+	
+}
+public Policy(int policyNumber, float policyPremium, int accountNumber) {
+	super();
+	this.policyNumber = policyNumber;
+	this.policyPremium = policyPremium;
+	this.accountNumber = accountNumber;
+}
 public int getPolicyNumber() {
 	return policyNumber;
 }
@@ -21,6 +30,11 @@ public int getAccountNumber() {
 }
 public void setAccountNumber(int accountNumber) {
 	this.accountNumber = accountNumber;
+}
+@Override
+public String toString() {
+	return "Policy [policyNumber=" + policyNumber + ", policyPremium=" + policyPremium + ", accountNumber="
+			+ accountNumber + "]";
 }
 
 }
