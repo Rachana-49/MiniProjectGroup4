@@ -4,8 +4,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<<<<<<< HEAD
 <link rel = "stylesheet" href = "Claim.css">
 <title>Claim</title>
+=======
+//<link rel = "stylesheet" href = "Claim.css">
+<title>Insert title here</title>
+<style>
+body{
+padding : 25px;
+}
+</style>
+>>>>>>> branch 'master' of https://github.com/Rachana-49/MiniProjectGroup4.git
 </head>
 <body style="background:powderblue">
 	<div align="center"><h1>Register Your Claim</h1></div>
