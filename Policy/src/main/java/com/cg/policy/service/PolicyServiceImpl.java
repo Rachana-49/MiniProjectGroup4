@@ -7,21 +7,24 @@ import com.cg.policy.model.Policy;
 
 public class PolicyServiceImpl implements IPolicyService {
 	PolicyRepoImpl repo=new PolicyRepoImpl();
-	    
-		@Override
-		public List<Policy> getAllPolicy() throws SQLException {
-			
-			return repo.getAllPolicy();
-		}
 
-		@Override
-		public Policy addPolicy(Policy policy) throws SQLException {
-			return repo.addPolicy(policy);
-		}
-
-		
-		
-	       
+	@Override
+	public List<Policy> getAllPolicy() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+	@Override
+	public Policy addPolicy(Integer policynumber) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	    
+		
+		
+
+		
+		
+	   }
 
 
