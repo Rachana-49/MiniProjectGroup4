@@ -4,14 +4,19 @@
 <html>
 <head></head>
 <link rel="stylesheet" type="text/css" href="Login1.css">
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>JSP Page</title>
 </head>
-<body>
+<body style="background-color:powderblue">
+
 
 <div>
 <form>
-  <h1>Log in</h1>
+<div align = "center">
+
+
+  <h1><ul>LOGIN</ul></h1>
   
   <p>
     <label for="username">USERNAME</label>
@@ -24,6 +29,7 @@
   <p>
    <input type="submit" value="Login"> 
   </p>
+  </div>
   
   
 </form>
