@@ -5,54 +5,47 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel = "stylesheet" href = "Claim.css">
-<title>Insert title here</title>
-<style>
-body{
-padding : 25px;
-}
-</style>
+<title>Claim</title>
 </head>
-<body>
-	<form action = "/Registration" method = "post">
-		
-			<table border="1" width="30%" cellpadding="5">
-				<thead>
-					<tr>
-						<th colspan="2">Enter Information Here</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Claim Reason</td>
-						<td><input type="text" name="r" value="" /></td>
-					</tr>
-					<tr>
-						<td>Claim Location</td>
-						<td><input type="text" name="cl" value="" /></td>
-					</tr>
-					<tr>
-						<td>Claim City</td>
-						<td><input type="text" name="cc" value="" /></td>
-					</tr>
-					<tr>
-						<td>Claim State</td>
-						<td><input type="text" name="cs" value="" /></td>
-					</tr>
-					<tr>
-						<td>Zip Code</td>
-						<td><input type="text" name="z" value="" /></td>
-					</tr>
-					<tr>
-						<td>Claim Type</td>
-						<td><input type="text" name="ct" value="" /></td>
-					</tr>
-					<tr>
-						<td><input type="submit" value="Submit" /></td>
-						<td><input type="reset" value="Reset" /></td>
-					</tr>
-				</tbody>
-			</table>
-	</form>
-
-</body>
+<body style="background:powderblue">
+	<div align="center"><h1>Register Your Claim</h1></div>
+		<table class="center">
+			<form action = "NewFile.jsp" method = "post">	
+				<tr>
+					<td>Claim Reason &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="text" name="reason" pattern="[A-za-z]{30}"></td>
+				</tr>
+				<tr>
+					<td>Accident Location &nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="text" name="location"></td>
+				</tr>
+				<tr>
+					<td>Accident City &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="text" name="city"></td>
+				</tr>
+				<tr>
+					<td>Accident State &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="text" name="state"></td>
+				</tr>
+				<tr>
+					<td>Accident Zip &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><input type="text" name="Zip"></td>
+				</tr>
+				<tr>
+					<td>Claim Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					<td><select id="claims" name="claimlist">
+					<option value="none"></option>
+				  	<option value="Accident">Accident</option>
+				  	<option value="Home">Home</option>
+				  	<option value="Vechile">Vechile</option>
+				  	<option value="Education">Education</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><button type="Submit" form="NewFile.jsp" value="Submit">Submit</button>
+					<button type="Reset" value="reset">Reset</button>
+				</tr>
+			</form>
+		</table>
+	</body>
 </html>
