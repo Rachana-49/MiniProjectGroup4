@@ -3,17 +3,18 @@
 * { box-sizing: border-box; }
 
 body {
-	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-  color:white;
-  font-size:12px;
-  background:#333 url(/images/classy_fabric.png);
+	background-image:url("../Images/user.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center; 
+	height: 120vh;
 }
 
 form {
  	background:#111; 
   width:300px;
   margin:30px auto;
-  border-radius:0.4em;
+  border-radius:0d.4em;
   border:1px solid #191919;
   overflow:hidden;
   position:relative;

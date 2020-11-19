@@ -22,9 +22,10 @@
     <input type="password" name="password" id="password">
   </p>
   <p>
-   <input type="submit" name="go" id="go" value="Log in">
-  
+   <input type="submit" value="Login"> 
   </p>
+  
+  
 </form>
 </div>
 </body>
