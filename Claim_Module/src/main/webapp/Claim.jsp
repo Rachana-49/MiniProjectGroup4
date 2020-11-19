@@ -4,11 +4,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel = "stylesheet" href = "Claim.css">
 <title>Insert title here</title>
+<style>
+body{
+padding : 25px;
+}
+</style>
 </head>
 <body>
-	<form method="post" action="register.jsp">
-		<center>
+	<form action = "/Registration" method = "post">
+		
 			<table border="1" width="30%" cellpadding="5">
 				<thead>
 					<tr>
@@ -46,7 +52,6 @@
 					</tr>
 				</tbody>
 			</table>
-		</center>
 	</form>
 
 </body>
