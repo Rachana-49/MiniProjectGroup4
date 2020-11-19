@@ -9,8 +9,9 @@ public interface IPolicyService {
 	
 
   public List<Policy> getAllPolicy() throws SQLException;
-	         public Policy addPolicy(Policy policy) throws SQLException;
+	         public Policy addPolicy(Integer policynumber) throws SQLException;
 	         //Created interface
+			
 	         
 	         
 	}

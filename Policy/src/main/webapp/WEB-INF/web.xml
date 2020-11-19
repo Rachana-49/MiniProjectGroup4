@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>PolicyServlet</servlet-name>
+  	<display-name>PolicyServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.cg.policy.controller.PolicyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>PolicyServlet</servlet-name>
+  	<url-pattern>/PolicyServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
