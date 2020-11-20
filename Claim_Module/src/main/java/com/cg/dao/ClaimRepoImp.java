@@ -23,13 +23,15 @@ public class ClaimRepoImp implements IClaimRepo {
 	@Override
 	public Claim addClaim(Claim claim) throws SQLException {
 		// TODO Auto-generated method stub
-		psmt=con.prepareStatement("insert into student values(?,?,?,?)");
-		psmt.setString(1, claim.getClaimReason());
-		psmt.setString(2, claim.getAccidentLocationStreet());;
-		psmt.setString(3, claim.getAccidentCity());
-		psmt.setString(4, claim.getAccidentState());
-		psmt.setInt(5, claim.getAccidentZip());
-		psmt.setString(6, claim.getClaimType());
+		psmt=con.prepareStatement("insert into claim values(?,?,?,?,?,?,?,?)");
+		psmt.setInt(1, claim.getClaimNumber());
+		psmt.setString(2, claim.getClaimReason());
+		psmt.setString(3, claim.getAccidentLocationStreet());;
+		psmt.setString(4, claim.getAccidentCity());
+		psmt.setString(5, claim.getAccidentState());
+		psmt.setInt(6, claim.getAccidentZip());
+		psmt.setString(7, claim.getClaimType());
+		psmt.setInt(8, claim.getPolicyNumber());
 		
 		psmt.executeUpdate();
 		return claim;
