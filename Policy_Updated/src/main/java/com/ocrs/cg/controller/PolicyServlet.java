@@ -18,7 +18,7 @@ import com.ocrs.cg.model.Policy;
 
 
 
-@WebServlet("/viewpolicylist")
+@WebServlet("/view")
 public class PolicyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	@Override
@@ -30,10 +30,9 @@ public class PolicyServlet extends HttpServlet {
 		  out.println("i am in");
 		  List<Policy> ls=new ArrayList<Policy>();
 		  ls=service.getAllPolicy();
-		  //for(int i=0; i<ls.size(); i++){
-			//  out.println( ls.get(i));
-	//}
-		  System.out.println(ls.get(0));
+		  for(int i=0; i<ls.size(); i++){
+			  out.println( ls.get(i));
+	}
 	  }catch (SQLException e) {
 		// TODO Auto-generated catch block
 		

@@ -6,7 +6,7 @@ public class DBUtil {
 static Connection connection;
 	
 	public static Connection createConnection() throws SQLException {
-		connection=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/xe","system","jesusmary");
+		connection=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/xe","system","rachana");
 		return connection;
 	}
 }

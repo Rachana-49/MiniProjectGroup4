@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="viewpolicylist" method="post">
+<form action="view" method = "post">
 <input button type="submit" value="viewpolicylist">
 
 </form>

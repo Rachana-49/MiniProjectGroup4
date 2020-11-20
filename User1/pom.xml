@@ -3,7 +3,6 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.cg</groupId>
   <artifactId>User1</artifactId>
-  <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>User1 Maven Webapp</name>
   <url>http://maven.apache.org</url>
