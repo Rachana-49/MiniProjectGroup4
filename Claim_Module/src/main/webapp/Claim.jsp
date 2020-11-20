@@ -4,26 +4,22 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<<<<<<< HEAD
 <link rel = "stylesheet" href = "Claim.css">
-<title>Claim</title>
-=======
-//<link rel = "stylesheet" href = "Claim.css">
+
 <title>Insert title here</title>
 <style>
 body{
 padding : 25px;
 }
 </style>
->>>>>>> branch 'master' of https://github.com/Rachana-49/MiniProjectGroup4.git
 </head>
 <body style="background:powderblue">
 	<div align="center"><h1>Register Your Claim</h1></div>
 		<table class="center">
-			<form action = "NewFile.jsp" method = "post">	
+			<form action = "Register" method = "post">	
 				<tr>
 					<td>Claim Reason &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-					<td><input type="text" name="reason" pattern="[A-za-z]{30}"></td>
+					<td><input type="text" name="reason" ></td>
 				</tr>
 				<tr>
 					<td>Accident Location &nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -52,7 +48,7 @@ padding : 25px;
 					</select></td>
 				</tr>
 				<tr>
-					<td><button type="Submit" form="NewFile.jsp" value="Submit">Submit</button>
+					<td><button type="Submit" value="Submit">Submit</button>
 					<button type="Reset" value="reset">Reset</button>
 				</tr>
 			</form>
