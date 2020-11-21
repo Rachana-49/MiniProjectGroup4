@@ -13,7 +13,7 @@ public class UserRepoImp implements IUserRepo{
 
 	Connection con;
 	PreparedStatement psmt;
-	ResultSet rs;
+	ResultSet rs = null;
 
 	public UserRepoImp() {
 		try {
@@ -25,7 +25,7 @@ public class UserRepoImp implements IUserRepo{
 	}
 	public UserModule addUser(UserModule userModule) throws SQLException {
 		// TODO Auto-generated method stub
-		psmt=con.prepareStatement("insert into student values(?,?,?)");
+		psmt=con.prepareStatement("insert into UserRole values(?,?,?)");
 		psmt.setString(1, userModule.getUsername());
 		psmt.setString(2, userModule.getPassword());;
 		psmt.setString(3, userModule.getRoleCode());
@@ -35,7 +35,7 @@ public class UserRepoImp implements IUserRepo{
 	}
 
 	public List<UserModule> getAllUser() throws SQLException {
-		psmt=con.prepareStatement("select * from claim");
+		psmt=con.prepareStatement("select * from UserRole");
 		
 		rs=psmt.executeQuery();
 		
@@ -59,10 +59,11 @@ public class UserRepoImp implements IUserRepo{
 		// TODO Auto-generated method stub
 		boolean status = false;
 		try {
-		psmt=con.prepareStatement("select * from UserRole where userName=? and password=?");
+		psmt=con.prepareStatement("select * from UserRole where userName=? and password=? and roleCode = ?");
 		psmt.setString(1, userModule.getUsername());
-		psmt.setString(2, userModule.getPassword());;
-		psmt.executeUpdate();
+		psmt.setString(2, userModule.getPassword());
+		psmt.setString(3, userModule.getRoleCode());
+		rs = psmt.executeQuery();
 		status = rs.next();
 		}
 		catch(Exception e) {
