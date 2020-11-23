@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel = "stylesheet" href = "LoginForm.css">
+<link rel = "stylesheet" href = "NewFile.css">
 <title>JSP Page</title>
 </head>
 <body>
@@ -30,5 +30,7 @@
 		</div>
 	</form>
 </div>
+</body>
+</html>
 </body>
 </html>
