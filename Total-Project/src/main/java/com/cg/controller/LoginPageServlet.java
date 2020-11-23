@@ -35,6 +35,7 @@ public class LoginPageServlet extends HttpServlet {
 			} 
 		catch (InvalidCredentialsException e) 
 		{
+			System.out.println("Invalid Crendials");
 			e.printStackTrace();
 		}
 				
