@@ -4,46 +4,32 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome to Insurance Claim Registration Page.</title>
+<link rel = "stylesheet" href = "Index.css">
+<title>JSP Page</title>
 </head>
-<body style="background-color:powderblue">
-
-
-<div>
-<form action = "indexCheck" method = "post">
-<div align = "center">
-
-
-
-  <h1>LOGIN</h1>
-  <tr>
-    <td><label for="username">USERNAME&nbsp;&nbsp;</label>
-    <input type="text" name="uname" id="uname"><br></td>
-  </tr>
-  <br>
-<tr>
-    <td><label for="password">PASSWORD&nbsp;&nbsp;</label>
-   <input type="password" name="password" id="password"><br></td>
-   </tr>
-   <br>
-   <td>
-   <label for = "userType">USER TYPE&nbsp;&nbsp;</label>
-   <tr><select id="user" name="userType">
-	<option value="none"></option>
-	<option value="INSURED">Insured</option>
-	<option value="CLAIM HANDLER">Claim Handler</option>
-	<option value="CLAIM ADJUSTER">Claim Adjuster</option>
-	
-	</select>
-	</tr>
-	</td>
-  </br><div align="center"><br>
-   <button type="submit" value="Login">LOGIN </div>
-   
-  </div>
-  
- 
-</form>
+<body>
+<div class = "wrap">
+	<form action="indexCheck" method="post">
+		<div class="container">
+			<h1>LOGIN</h1>
+			<hr>
+			<lable for="username"><b>User Name</b></lable>
+			<input type="text" name="uname" id="uname" pattern= "[A-Za-z]{5,30}"required>
+			<lable for="psw"><b>Password</b></lable>
+			<input type="password" name="password" id="password" pattern= "[A-Za-z0-9]{5,30}"required>
+			<br>
+			<lable for="utype"><b>User Type</b></lable>
+			<br></br>
+			<select id="user"class = "dropdown" name="userType" required>
+				<option value=""></option>
+				<option value="INSURED">Insured</option>
+				<option value="CLAIM HANDLER">Claim Handler</option>
+				<option value="CLAIM ADJUSTER">Claim Adjuster</option>
+			</select>
+			<br></br>
+			<button type="submit" class="btn">Login</button>
+		</div>
+	</form>
 </div>
 </body>
 </html>

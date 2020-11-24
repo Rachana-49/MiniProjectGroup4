@@ -12,7 +12,7 @@ String roleCode = (String) session.getAttribute("roleCode");
 %>
 <button id="btnCreateClaim" disabled>Create Claim</button>
 <button id="btnViewClaim" disabled>View Claim</button>
-<button id="btnCreateUser" disabled>Create New Profile</button>
+<button id="btnCreateUser" disabled onclick="window.location='UserCreation.jsp'">Create New Profile</button>
 <button id="btnGenerateReport" disabled>Generate Report</button>
 
 <script type="text/javascript">
@@ -33,6 +33,7 @@ switch(roleCode){
 		document.getElementById('btnGenerateReport').disabled=false;
 		break;
 }
+
 </script>
 
 </body>

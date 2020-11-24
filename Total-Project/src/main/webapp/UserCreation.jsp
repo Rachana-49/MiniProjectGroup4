@@ -4,6 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<html>
+<head>
+<meta charset="ISO-8859-1">
 <title>User Page Creation</title>
 <style>
 table.center {
@@ -30,7 +34,7 @@ button {
 <body style="background:pink">
 <div align="center"><h1>Create Your User Page</h1></div>
 <table class="center">
-<form action="/anyaction" method="post">
+<form action="createUser" method="post">
 <tr>
 <td>User Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td><input type="text" name="uname"></td>
