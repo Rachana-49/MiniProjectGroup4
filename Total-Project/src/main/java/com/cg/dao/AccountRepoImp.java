@@ -23,13 +23,15 @@ public class AccountRepoImp implements IAccountRepo{
 	}
 
 	@Override
-	public Account addAccount(Account account) throws SQLException {
-		psmt=con.prepareStatement("insert into Account values(?,?)");
-		psmt.setInt(1, account.getAccountNumber());
-		psmt.setString(2, account.getUserName());
+	public int addAccount(Account account) throws SQLException {
+		int status = 0;
+		psmt=con.prepareStatement("insert into Account values(accountNumber.nextval,?)");
+		psmt.setString(1, account.getUserName());
 		
-		psmt.executeUpdate();
-		return account;
+		status = psmt.executeUpdate();
+		
+		
+		return status;
 	}
 
 	@Override
@@ -50,6 +52,21 @@ public class AccountRepoImp implements IAccountRepo{
 		return validAccount;
 		
 	}
+
+	@Override
+	public Account getAccountDetails() throws SQLException {
+		psmt=con.prepareStatement("select * from Account");
+		rs = psmt.executeQuery();
+		Account account = new Account();
+		while(rs.next()) {
+			int accNum = rs.getInt("accountNumber");
+			String userName = rs.getString("userName");
+			account.setAccountNumber(accNum);
+			account.setUserName(userName);
+		}
+		return account;
+	}
+	 
 	
 	
 

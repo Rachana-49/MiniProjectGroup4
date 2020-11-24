@@ -18,15 +18,6 @@
 			<lable for="psw"><b>Password</b></lable>
 			<input type="password" name="password" id="password" pattern= "[A-Za-z0-9]{5,30}"required>
 			<br>
-			<lable for="utype"><b>User Type</b></lable>
-			<br></br>
-			<select id="user"class = "dropdown" name="userType" required>
-				<option value=""></option>
-				<option value="INSURED">Insured</option>
-				<option value="CLAIM HANDLER">Claim Handler</option>
-				<option value="CLAIM ADJUSTER">Claim Adjuster</option>
-			</select>
-			<br></br>
 			<button type="submit" class="btn">Login</button>
 		</div>
 	</form>

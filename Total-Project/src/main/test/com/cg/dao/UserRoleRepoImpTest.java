@@ -1,22 +1,19 @@
 package com.cg.dao;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import java.sql.SQLException;
 
 import org.junit.Test;
-
-import com.cg.exception.InvalidCredentialsException;
-import com.cg.model.UserRole;
+import com.cg.model.User;
 
 public class UserRoleRepoImpTest {
 
-	UserRoleRepoImp repo = new UserRoleRepoImp();
+	UserRepoImp repo = new UserRepoImp();
 	@Test
-	public void testAddUser() throws SQLException {
-		UserRole user = new UserRole("Meera","Meera123","CLAIM ADJUSTER");
-		UserRole savedUser = repo.addUser(user);
+	public void testValidateUser() throws SQLException {
+		User user = new User("Geetha","Geetha123","CLAIM ADJUSTER");
+		User savedUser = repo.addUser(user);
 		assertEquals(user,savedUser);
 		
 	}

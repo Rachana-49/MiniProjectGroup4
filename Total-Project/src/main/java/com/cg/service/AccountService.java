@@ -7,16 +7,23 @@ import com.cg.model.Account;
 
 public class AccountService implements IAccountService{
 	AccountRepoImp repo = new AccountRepoImp();
+	
 	@Override
-	public Account addAccount(Account account) throws SQLException {
-		// TODO Auto-generated method stub
-		return repo.addAccount(account);
+	public boolean validateAccount(Account account) throws SQLException {
+	
+		return repo.validateAccount(account);
 	}
 
 	@Override
-	public boolean validateAccount(Account account) throws SQLException {
-		// TODO Auto-generated method stub
-		return repo.validateAccount(account);
+	public Account getAccountDetails() throws SQLException {
+		
+		return repo.getAccountDetails();
+	}
+
+	@Override
+	public int addAccount(Account account) throws SQLException {
+		int result = repo.addAccount(account);
+		return result;
 	}
 	
 
