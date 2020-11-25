@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel = "stylesheet" href = "Claim.css">
+<link rel = "stylesheet" href = "ClaimCreation.css">
 
 <title>Insert title here</title>
 <style>
@@ -15,6 +15,10 @@ padding : 25px;
 </head>
 
 <body style="background:powderblue">
+<div class="navbar">
+<a href="HomePage.jsp">Home</a>
+ <a href="Logout.jsp">Logout</a>
+ </div>
 <%HttpSession Session = request.getSession();
 session.setAttribute("policyNumber", request.getParameter("policyNum"));%>
 	<div align="center"><h1>Register Your Claim</h1></div>

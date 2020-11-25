@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 import com.cg.model.Claim;
 import com.cg.service.ClaimSeviceImp;
 
 public class ClaimCreationSevlet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
        
    

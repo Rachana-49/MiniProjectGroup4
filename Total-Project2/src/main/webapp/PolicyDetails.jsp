@@ -9,8 +9,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel = "stylesheet" href = "PolicyDetails.css">
 </head>
 <body>
+<div class="navbar">
+<a href="HomePage.jsp">Home</a>
+ <a href="Logout.jsp">Logout</a>
+ </div>
 <%
 	HttpSession Session = request.getSession();
 	String userName = (String)session.getAttribute("userName"); 
@@ -29,17 +34,17 @@
 	System.out.println(policiesList);
 	session.setAttribute("policyList", policiesList);
 %>
-<table class="table">
-			<thead>
+			<table class = "center">
+		
 				<tr>
-					<th>Policy Number        </th>
-					<th>Policy Type          </th>
-					<th>Policy Premium       </th>
-					<th>Account Number       </th>
-					<th>CREATE               </th>
+					<th>Policy Number &nbsp;&nbsp;&nbsp;</th>
+					<th>Policy Type &nbsp;&nbsp;&nbsp;</th>
+					<th>Policy Premium &nbsp;&nbsp;&nbsp;</th>
+					<th>Account Number &nbsp;&nbsp;&nbsp;</th>
+					<th>CREATE &nbsp;</th>
 				</tr>
-			</thead>
-			<tbody>
+			
+			
 			<% 
 				for(Policy policy:(List<Policy>)session.getAttribute("policyList")){
 		out.print("<tr>");
@@ -51,7 +56,7 @@
 		out.print("</tr>");
 		}
 			%>
-			</tbody>
+		
 		</table>
 </body>
 </html>
