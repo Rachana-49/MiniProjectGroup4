@@ -65,8 +65,8 @@ public class UserCreationServlet extends HttpServlet {
 			}
 			
 		}
-			writer.println(userCreated.getUserName());
-			writer.println(newAccount.getAccountNumber());
+			//writer.println(userCreated.getUserName());
+			//writer.println(newAccount.getAccountNumber());
 		
 	}
 
