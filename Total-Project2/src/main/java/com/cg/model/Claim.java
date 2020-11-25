@@ -8,13 +8,13 @@ public class Claim {
 	private String accidentState;
 	private int accidentZip;
 	private String claimType;
-	private int policyNumber;
+	private long policyNumber;
 	
 	public Claim() {
 	}
 	
 	public Claim(int claimNumber, String claimReason, String accidentLocationStreet, String accidentCity,
-			String accidentState, int accidentZip, String claimType, int policyNumber) {
+			String accidentState, int accidentZip, String claimType, long policyNumber) {
 		super();
 		this.claimNumber = claimNumber;
 		this.claimReason = claimReason;
@@ -82,12 +82,12 @@ public class Claim {
 		this.claimType = claimType;
 	}
 
-	public int getPolicyNumber() {
+	public long getPolicyNumber() {
 		return policyNumber;
 	}
 
-	public void setPolicyNumber(int policyNumber) {
-		this.policyNumber = policyNumber;
+	public void setPolicyNumber(long policyNumber2) {
+		this.policyNumber = policyNumber2;
 	}
 
 	@Override

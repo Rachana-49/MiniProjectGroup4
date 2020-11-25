@@ -1,0 +1,50 @@
+@charset "ISO-8859-1";	
+.navbar {
+  overflow: hidden;
+  background-color: green;
+  font-family: Arial;
+}
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: black;
+}
+body{
+	background-color:#c0c0c0;
+}
+.container {
+width: 900px;
+padding: 7% 50px;
+margin: 0 auto;
+}
+button {
+width: 400px;
+display: inline-block;
+margin: 5% 20px;
+padding: 20px 0px;
+text-align: center;
+font-family: Arial;
+font-size: 16px;
+font-weight: bold;
+position: relative;
+letter-spacing: 1.5px;
+}
+button:nth-child(1) {
+background: pink;
+}
+button:nth-child(2) {
+background: yellow;
+}
+button:nth-child(3) {
+background: #00ff40;
+}
+button:nth-child(4) {
+background: #8080ff;
+}
+

@@ -16,7 +16,7 @@ padding : 25px;
 
 <body style="background:powderblue">
 <%HttpSession Session = request.getSession();
-session.setAttribute("policyNumber", request.getParameter("policyNumber"));%>
+session.setAttribute("policyNumber", request.getParameter("policyNum"));%>
 	<div align="center"><h1>Register Your Claim</h1></div>
 		<table class="center">
 			<form action = "ClaimCreationSevlet" method = "post">	

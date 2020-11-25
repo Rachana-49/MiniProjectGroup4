@@ -7,17 +7,24 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="navbar">
+ <a href="Logout.jsp">Logout</a>
+ </div>
 <%HttpSession Session = request.getSession();
 String roleCode = (String) session.getAttribute("roleCode");
 %>
+<link rel = "stylesheet" href = "HomePage.css">
+
+<div class="container">
 <button id="btnCreateClaim" disabled onclick="window.location='PolicyDetails.jsp'">Create Claim</button>
 <button id="btnViewClaim" disabled>View Claim</button>
 <button id="btnCreateUser" disabled onclick="window.location='UserCreation.jsp'">Create New Profile</button>
 <button id="btnGenerateReport" disabled>Generate Report</button>
+</div>
 <script type="text/javascript">
 var roleCode='<%=roleCode%>';
 switch(roleCode){
-	case 'INSURED':
+	case 'Insured':
 		document.getElementById('btnCreateClaim').disabled=false;
 		document.getElementById('btnViewClaim').disabled=false;
 		break;

@@ -32,7 +32,7 @@ public class ClaimRepoImp implements IClaimRepo {
 		psmt.setString(4, claim.getAccidentState());
 		psmt.setInt(5, claim.getAccidentZip());
 		psmt.setString(6, claim.getClaimType());
-		psmt.setInt(7, claim.getPolicyNumber());
+		psmt.setLong(7, claim.getPolicyNumber());
 		
 		psmt.executeUpdate();
 		return claim;
