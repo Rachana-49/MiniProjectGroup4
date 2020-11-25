@@ -23,18 +23,17 @@ ques = cs.getClaimQuestions(claimType);
 session.setAttribute("questionlst", ques);
 				for(ClaimQuestions claimQues:(List<ClaimQuestions>)session.getAttribute("questionlst")){
 %>
-<table>
-					<tr>
-					<td><b><%=claimQues.getQuestion() %></b>
-					<td><%=claimQues.getAnswer1() %>
-					<input type = "radio" value = "answer1" name ="<%=claimQues.getQuestion() %>">
-					<td>
-					<td><%=claimQues.getAnswer2() %>
-					<input type = "radio" value = "answer2" name ="<%= claimQues.getQuestion() %>">
-					</td>
-					</tr>
+
+
+					
+					<h3><b><%=claimQues.getQuestion() %></b></h3>
+					
+					<h4><input type = "radio" value = "answer1" name ="<%=claimQues.getQuestion() %>">
+					<%=claimQues.getAnswer1() %></h4>
+					<h4><input type = "radio" value = "answer2" name ="<%=claimQues.getQuestion() %>">
+					<%=claimQues.getAnswer2() %></h4>
 					<%} %>
-</table>
+
 <button type="button">Submit</button>
 		
 </body>

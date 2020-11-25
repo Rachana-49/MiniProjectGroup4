@@ -1,0 +1,58 @@
+@charset "ISO-8859-1";
+.navbar {
+  overflow: hidden;
+  background-color: green;
+  font-family: Arial;
+}
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: black;
+}
+body {
+background-color: pink;
+height: 100%;
+background-repeat: no-repeat;
+background-size: 900px 900px;
+}
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+h1 {
+	text-align: center;
+}
+.container {
+	position: absolute;
+	right: 450px;
+	margin: 40px;
+	max-width: 300px;
+	padding: 16px;
+	background: green;
+	border-radius: 20px;
+}
+input [type=text], input[type=text] {
+	width:100%;
+	padding: 9px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: white;
+	font-size: 15px;
+}
+.btn {
+	background: black;
+	color: white;
+	padding: 13px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+}
