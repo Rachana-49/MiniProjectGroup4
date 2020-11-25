@@ -5,9 +5,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User Page Creation</title>
+<link rel = "stylesheet" href = "UserCreate.css">
 </head>
-<body style="background:pink">
-<div align="center"><h1>Create Your User Page</h1></div>
+<body>
 <div class="navbar">
   <a href="#logout">Logout</a>
   <a href="#home">Home</a>

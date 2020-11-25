@@ -8,7 +8,7 @@ public class DBUtility {
 static Connection con;
 	
 	public static Connection getConnection() throws SQLException {
-		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/xe","system","rachana");
+		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/xe","system","Bhavitha06");
 		return con;
 
 }
