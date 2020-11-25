@@ -11,9 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.cg.exception.InvalidCredentialsException;
-import com.cg.model.UserRole;
-import com.cg.service.UserRoleServiceImp;
+import com.cg.model.User;
+import com.cg.service.UserServiceImp;
 @WebServlet("/indexCheck")
 public class LoginPageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -25,24 +24,24 @@ public class LoginPageServlet extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		String uname = request.getParameter("uname");
 		String pass = request.getParameter("password");
-		String role = request.getParameter("userType");
-		UserRoleServiceImp userService = new UserRoleServiceImp();
-		UserRole user = new UserRole(uname,pass,role);
+		UserServiceImp userService = new UserServiceImp();
+		User user = new User();
+		user.setUserName(uname);
+		user.setPassword(pass);
 		boolean validation = false;
-		try 
-		{
-			validation =  userService.validateUserRole(user);
-			} 
-		catch (InvalidCredentialsException e) 
-		{
-			System.out.println("Invalid Crendials");
-			e.printStackTrace();
-		}
-				
-			
-		
+		try {
+			validation =  userService.validateUser(user);
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}	
 		HttpSession session = request.getSession();
 		if(validation) {
+			String role = null;
+			try {
+				role = userService.getUserRole(user);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 			session.setAttribute("roleCode", role);
 			response.sendRedirect("HomePage.jsp"); 
 		}

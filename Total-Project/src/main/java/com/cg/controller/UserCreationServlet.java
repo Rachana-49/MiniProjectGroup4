@@ -10,15 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.cg.model.UserRole;
-import com.cg.service.UserRoleServiceImp;
+import com.cg.model.Account;
+import com.cg.model.User;
+import com.cg.service.AccountService;
+import com.cg.service.UserServiceImp;
 @WebServlet("/createUser")
 public class UserCreationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     public UserCreationServlet() {
         super();
-        // TODO Auto-generated constructor stub
+     
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,17 +28,45 @@ public class UserCreationServlet extends HttpServlet {
 		String uname = request.getParameter("uname");
 		String pass = request.getParameter("passw");
 		String role = request.getParameter("role");
-		UserRoleServiceImp userService = new UserRoleServiceImp();
-		UserRole user1 = new UserRole(uname,pass,role);
-		UserRole userCreated = null;
+		UserServiceImp userService = new UserServiceImp();
+		User user1 = new User(uname,pass,role);
+		User userCreated = null;
+		String userRole = null;
+		Account account = new Account();
+		AccountService accService = new AccountService();
+		Account newAccount = null;
+		int accCreated = 0;
+		
 		try {
 			userCreated = userService.addUser(user1);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-			writer.println(userCreated.getUserName());
+		try {
+			userRole = userService.getUserRole(user1);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if(userRole.equalsIgnoreCase("INSURED")) {
+			System.out.println("I am In");
+			account.setUserName(uname);
+			try {
+				accCreated = accService.addAccount(account);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} 
+		}
+		if(accCreated == 1) {
+			try {
+				newAccount = accService.getAccountDetails();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+			//writer.println(userCreated.getUserName());
+			//writer.println(newAccount.getAccountNumber());
 		
 	}
 
