@@ -14,7 +14,6 @@ String roleCode = (String) session.getAttribute("roleCode");
 <button id="btnViewClaim" disabled>View Claim</button>
 <button id="btnCreateUser" disabled onclick="window.location='UserCreation.jsp'">Create New Profile</button>
 <button id="btnGenerateReport" disabled>Generate Report</button>
-
 <script type="text/javascript">
 var roleCode='<%=roleCode%>';
 switch(roleCode){

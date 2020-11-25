@@ -14,7 +14,12 @@
 <%
 	HttpSession Session = request.getSession();
 	String userName = (String)session.getAttribute("userName"); 
-	//System.out.println(userName);
+	String roleCode = (String)session.getAttribute("roleCode"); 
+	System.out.println(userName);
+	if(roleCode.equalsIgnoreCase("Claim Adjuster")){
+		System.out.println("I am In.");
+		response.sendRedirect("Agent.jsp");
+	}
 	PolicyServiceImp policyService = new PolicyServiceImp();
 	List<Policy> policiesList = new ArrayList<Policy>();
 	AccountService accountService = new AccountService();
@@ -42,7 +47,7 @@
 		out.print("<td>"+policy.getPolicyType() +"</td>");
 		out.print("<td>"+policy.getPremium()+"</td>");
 		out.print("<td>"+policy.getAccountNumber()+"</td>");
-		out.print("<td><button onclick=\"window.location='ClaimCreation.jsp'\">Create Claim</button></td>");
+		out.print("<td><button onclick=\"window.location='ClaimCreation.jsp?policyNum="+policy.getPolicyNumber()+"'\">Create Claim</button></td>");
 		out.print("</tr>");
 		}
 			%>

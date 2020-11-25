@@ -12,7 +12,6 @@ public class ClaimQuestionsRepoImp implements IClaimQuestionsRepo{
 	Connection con;
 	PreparedStatement psmt;
 	ResultSet rs = null;
-	
 	public ClaimQuestionsRepoImp() {
 		try {
 			con = DBUtility.getConnection();
@@ -25,7 +24,7 @@ public class ClaimQuestionsRepoImp implements IClaimQuestionsRepo{
 	@Override
 	public List<ClaimQuestions> getClaimQuestions(String claimType) throws SQLException {
 		
-		psmt=con.prepareStatement("select * from ClaimQuestions where claimType = ?");
+		psmt=con.prepareStatement("select * from ClaimDetails where claimType = ?");
 		psmt.setString(1, claimType);
 		rs=psmt.executeQuery();
 		List<ClaimQuestions> claimQuesList =new ArrayList<ClaimQuestions>();

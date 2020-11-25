@@ -10,9 +10,29 @@
   	<description></description>
   	<servlet-class>com.cg.controller.ClaimCreation</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ClaimCreationSevlet</servlet-name>
+  	<display-name>ClaimCreationSevlet</display-name>
+  	<description></description>
+  	<servlet-class>com.cg.controller.ClaimCreationSevlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ClaimDetails</servlet-name>
+  	<display-name>ClaimDetails</display-name>
+  	<description></description>
+  	<servlet-class>com.cg.controller.ClaimDetails</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ClaimCreation</servlet-name>
   	<url-pattern>/ClaimCreation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ClaimCreationSevlet</servlet-name>
+  	<url-pattern>/ClaimCreationSevlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ClaimDetails</servlet-name>
+  	<url-pattern>/ClaimDetails</url-pattern>
   </servlet-mapping>
  
   
